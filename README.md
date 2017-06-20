@@ -1,1 +1,1 @@
-# Clock
+Clock using Jscript and CSS
