@@ -1,0 +1,47 @@
+
+
+body {
+  background: grey;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#clock-whole {
+margin: 150px auto;
+width:500px;
+height:500px;
+border:5px solid white;
+border-radius: 50%;
+}
+
+#clock-outline {
+position:relative;
+width:100%;
+height:100%;
+
+}
+
+.hand {
+position:absolute;
+width:50%;
+height:6px;
+top:50%;
+background: black;
+transform-origin: 100%;
+transition: all 0.5s;
+
+}
+
+#seconds {
+background: red;
+
+}
+
+#hours {
+
+}
+
+#minutes {
+
+}
