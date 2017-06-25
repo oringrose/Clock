@@ -13,6 +13,7 @@ width:500px;
 height:500px;
 border:5px solid white;
 border-radius: 50%;
+background-color: #5c5c5c;
 }
 
 #clock-outline {
@@ -68,4 +69,55 @@ right:8%;
 #num3 {
 top:47%;
 right:2%;
+}
+
+#num4 {
+top:70%;
+right:8%;
+}
+
+#num5 {
+top:87%;
+right:25%;
+}
+
+#num6 {
+top:93%;
+right:48.5%;
+}
+
+#num7 {
+top:87%;
+left:25%;
+}
+
+#num8 {
+top:70%;
+left:8%;
+}
+
+#num9 {
+top:47%;
+left:2%;
+}
+
+#num10 {
+top:24%;
+left:8%;
+}
+
+#num11 {
+top:7%;
+left:25%;
+}
+
+#num12 {
+right:47%;
+}
+
+#current-date {
+text-align: center;
+color:white;
+font-family: 'Open Sans', sans-serif;
+font-size: 25px;
 }

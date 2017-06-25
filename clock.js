@@ -1,3 +1,5 @@
+
+
 function setDate() {
 
 var sHand = document.getElementById("seconds");
@@ -25,5 +27,18 @@ console.log("minutes are " + minutes);
 console.log("hour is  " + hours);
 
 }
+var myDate = new Date();
+console.log(myDate);
+
+var currentDate = new Date();
+var cDate = document.getElementById("current-date");
+
+var dateTime = currentDate.getDate() + "/"
+             + (currentDate.getMonth()+1) + "/"
+             + currentDate.getFullYear();
+
+console.log(dateTime);
+
+cDate.textContent = "The Date is " + dateTime;
 
 setInterval(setDate, 1000);
