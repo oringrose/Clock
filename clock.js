@@ -20,9 +20,9 @@ var mDegree = ((minutes / 60) * 360) + 90;
 var hDegree = ((hours / 12) * 360) + 90;
 
 
-sHand.style.transform = `rotate(${sDegree}deg)`;
-mHand.style.transform = `rotate(${mDegree}deg)`;
-hHand.style.transform = `rotate(${hDegree}deg)`;
+sHand.style.transform = "rotate(" + sDegree + "deg)";
+mHand.style.transform = "rotate(" + mDegree + "deg)";
+hHand.style.transform = "rotate(" + hDegree + "deg)";
 
 console.log(seconds);
 //console.log("minutes are " + minutes);
@@ -56,23 +56,40 @@ var backgroundCol = document.getElementsByTagName("body")[0];
 var sun = document.getElementsByClassName("svg-sun")[0];
 var clouds = document.getElementsByClassName("clouds-container")[0];
 
+var stars1 = document.getElementsByClassName("stars1")[0];
+var stars2 = document.getElementsByClassName("stars2")[0];
+var moon = document.getElementById("moon");
+
+
 var today = new Date();
 var todayHours = today.getHours();
 
 
 console.log(todayHours);
 
-if (todayHours >= 7 && todayHours <= 22) {
+if (todayHours >= 7 && todayHours <= 21) {
 
 sun.style.display = "absolute";
 backgroundCol.style.background = "#2980b9";
 clouds.style.display = "absolute";
+
+
+stars2.style.display = "none";
+stars1.style.display = "none";
+moon.style.display = "none";
 
 } else {
 
 sun.style.display = "none";
 backgroundCol.style.background = "black";
 clouds.style.display = "none";
+
+stars2.style.display = "static";
+stars1.style.display = "static";
+moon.style.display = "static";
+
+
+
 
 }
 

@@ -5,6 +5,8 @@ background: #2980b9;
 display:flex;
 justify-content: center;
 align-items: center;
+max-width: 100%;
+overflow-x: hidden;
 }
 
 #clock-whole {
@@ -59,26 +61,16 @@ left:15%;
 .svg-sun {
 width:300px;
 height:300px;
-animation: spin 25s linear infinite;
 position:absolute;
 top:-50px;
 right:250px;
 
+animation: spin 50s linear infinite, sun-sides 1s linear infinite;
+z-index: -2;
 
 }
 
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);jkjkj
-  }
-}
 
-.svg-sun{
-width:300px;
-height:300px;
-animation: spin 50s  infinite, sun-glow 1s  infinite;
-z-index: -2
-}
 
 
 #sun{
@@ -213,21 +205,151 @@ transform:scale(0.8);
 animation: cloud-animate 55s linear infinite;
 }
 
+.stars {
+position:absolute;
+width:2px;
+height:2px;
+border-radius: 50%;
+background-color: white;
+box-shadow: 0 0 2px 2px white;
+
+}
+
+.stars1 {
+animation: stars1 5s linear infinite;
+}
+
+.stars2 {
+animation: stars2 10s linear infinite;
+}
+
+#s1 {
+left:10%;
+top:3%;
+}
+
+#s2 {
+top:20%;
+left:20%;
+}
+
+#s3 {
+top:9%;
+left:35%;
+}
+
+#s4 {
+top:15%;
+left:52%;
+}
+
+#s5 {
+top:5%;
+left:63%;
+}
+
+#s6 {
+top:10%;
+right:10%;
+}
+
+#s7 {
+top:20%;
+left:60%;
+}
+
+#s8 {
+top:15%;
+left:25%;
+}
+
+#s9 {
+top:5%;
+left:40%;
+}
+
+#moon {
+position: absolute;
+top:25px;
+right:324px;
+width: 150px;
+height: 150px;
+border-radius: 50%;
+background: #c7cbd0;
+border: 0.5px solid #737277;
+box-shadow: inset -10px 0px 0 0px #9098a1;
+z-index: -2;
+
+/* #737277; */
+}
+
+.craters {
+position: absolute;
+border-radius: 50%;
+background-color: #737277;
+}
+
+#crater1 {
+width:40px;
+height:40px;
+top:30px;
+left:20px;
+box-shadow: inset 6px -2px 0 0 #414043;
+
+}
+
+#crater2 {
+width:20px;
+height:20px;
+top:100px;
+left:60px;
+box-shadow: inset 3px -2px 0 0 #414043;
+}
+
+#crater3 {
+width:25px;
+height:25px;
+top:60px;
+left:80px;
+box-shadow: inset 3px -2px 0 0 #414043;
+}
+
+#crater4 {
+width:10px;
+height:10px;
+top:25px;
+left:100px;
+box-shadow: inset 1px -2px 0 0 #414043;
+}
+
+
 
 @keyframes cloud-animate {
-0% {margin-left: -100%}
+0% {margin-left: -110%}
 100% {margin-left: 5%}
 }
 
-@keyframes sun-glow {
+@keyframes sun-sides {
 0% {stroke:#f1c40f;}
 100% {stroke:#f1c40f;}
 }
 
 
+@keyframes spin {
+  100% {transform: rotate(360deg);}
 }
-@keyframes spin{
-	100% {
-		transform: rotate(360deg);
-	}
+
+
+@keyframes stars1 {
+0% {opacity: 1}
+50% {opacity: 1}
+70% {opacity: 0}
+100% {opacity: 1}
+}
+
+@keyframes stars2 {
+0% {opacity: 1}
+50% {opacity: 0}
+70% {opacity: 0.5}
+100% {opacity: 1}
 }
